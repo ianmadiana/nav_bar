@@ -4,6 +4,7 @@ import 'package:to_do_cats/screens/profile.dart';
 import 'package:to_do_cats/screens/settings.dart';
 
 import 'widgets/bottom_nav_bar.dart';
+import 'widgets/container_color_gradient.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = [const HomePage(), Profile(), Settings()];
+  final List<Widget> _pages = [HomePage(), Profile(), Settings()];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -34,9 +35,8 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('To Do List'),
         ),
-        body: PageView(
-          children: [_pages[_selectedIndex]],
-        ),
+        body: ContainerColorGradient(
+            pages: _pages, selectedIndex: _selectedIndex),
         // BOTTOM NAV BAR
         bottomNavigationBar: BottomNavbar(
           selectedIndex: _selectedIndex,

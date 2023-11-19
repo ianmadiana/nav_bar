@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_cats/methods/generate_item.dart';
 
 class Profile extends StatelessWidget {
   Profile({Key? key}) : super(key: key);
@@ -12,42 +13,7 @@ class Profile extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(20),
             child: Row(
-              children: [
-                Container(
-                  height: 50,
-                  width: 200,
-                  child: Text('data'),
-                  color: Colors.red,
-                ),
-                SizedBox(width: 10),
-                Container(
-                  height: 50,
-                  width: 200,
-                  child: Text('data'),
-                  color: Colors.green,
-                ),
-                SizedBox(width: 10),
-                Container(
-                  height: 50,
-                  width: 200,
-                  child: Text('data'),
-                  color: Colors.blue,
-                ),
-                SizedBox(width: 10),
-                Container(
-                  height: 50,
-                  width: 200,
-                  child: Text('data'),
-                  color: Colors.purple,
-                ),
-                SizedBox(width: 10),
-                Container(
-                  height: 50,
-                  width: 200,
-                  child: Text('data'),
-                  color: Colors.amber,
-                )
-              ],
+              children: generatedContainer,
             ),
           ),
         )
